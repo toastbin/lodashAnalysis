@@ -1,4 +1,4 @@
-const createMathOperation = require('./utils/createMathOperation.js')
+const createMathOperation = require('../utils/createMathOperation.js')
 
 /**
  * Adds two numbers.

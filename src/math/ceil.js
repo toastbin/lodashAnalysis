@@ -1,4 +1,4 @@
-const createRound = require('./utils/createRound')
+const createRound = require('../utils/createRound')
 
 /**
  * Computes `number` rounded up to `precision`. (Round up: the smallest integer greater than or equal to a given number.)
