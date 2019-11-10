@@ -57,7 +57,7 @@
 
 ```
 
-* 他直接 `return` 了一个函数, 这个 `return` 函数接收的两个参数就是传入的两个 `加数` , 首先他对参数的数量是否合法进行了分类, 如果两个参数都没有, 直接返回 `deafaultValue` 也就是 `0` , 如果只有一个参数, 那么就直接返回了另一个参数, 如果参数的数量是合法的, 他会先判断参数是否是字符串, 只要有一个是, 会通过 `baseToString` 将其全部转成一个字符串, 如果参数中并没有字符串, 通过 `baseToNumber` 确保的转成数值, 最后执行第一个传入的 `operator` , 最后返回的是传入的 `operator(value, other)` , 这下我们明白了, `operator` 是规定运算的种类, 因为当前是 `_.add` 所以传入的 `operator` 是 `(augend, addend) => augend + addend` , 同样的对四则运算都可以进行扩展, 上述用到了两个转换类型的函数 `baseToString` 和 `baseToNumber` , 我们来看一下他们都做了什么
+* 他直接 `return` 了一个函数, 这个 `return` 的函数接收的两个参数就是传入的两个 `加数` , 首先他对参数的数量是否合法进行了分类, 如果两个参数都没有, 直接返回 `deafaultValue` 也就是 `0` , 如果只有一个参数, 那么就直接返回了另一个参数, 如果参数的数量是合法的, 他会先判断参数是否是字符串, 只要有一个是, 会通过 `baseToString` 将其全部转成一个字符串, 如果参数中并没有字符串, 通过 `baseToNumber` 确保的转成数值, 最后执行第一个传入的 `operator` , 最后返回的是传入的 `operator(value, other)` , 这下我们明白了, `operator` 是规定运算的种类, 因为当前是 `_.add` 所以传入的 `operator` 是 `(augend, addend) => augend + addend` , 同样的对四则运算都可以进行扩展, 上述用到了两个转换类型的函数 `baseToString` 和 `baseToNumber` , 我们来看一下他们都做了什么
 
 #### baseToNumber
 
@@ -136,7 +136,7 @@ const ceil = createRound('ceil')
     - 举个例子 例如我们现在要转化的数是 `6.004` , 要求精度是 `2` 
     - 先转成 `6.004 e 2 => 600.4` 
     - 对其取整 `func(601)` 
-    - 转会小数 `601 e -2 => 6.01` 
+    - 转回小数 `601 e -2 => 6.01` 
 
 ``` 
   function createRound(methodName) {
