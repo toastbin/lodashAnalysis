@@ -14,8 +14,10 @@ const createMathOperation = require('../utils/createMathOperation.js')
  * // => 10
  */
 const add = createMathOperation((augend, addend) => augend + addend, 0)
+
 console.log(add(4, 5));
 console.log(add('4', '5'));
 console.log(add(10));
+console.log(add('1', [1, 2, 3]));
 
 module.exports = add

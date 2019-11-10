@@ -27,8 +27,11 @@ function baseToString(value) {
     return symbolToString ? symbolToString.call(value) : ''
   }
   const result = `${value}`
+  console.log(result, 'res');
   return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result
 }
 
+console.log(baseToString({}));
+console.log(baseToString([1, 2, 3]));
 
 module.exports = baseToString

@@ -21,6 +21,6 @@ function baseToNumber(value) {
   }
   return +value
 }
-
+console.log(baseToNumber({}));
 module.exports = baseToNumber
 
