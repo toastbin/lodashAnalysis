@@ -50,7 +50,7 @@ function toNumber(value) {
   }
   if (isObject(value)) {
     // {}.valueOf() => {}
-    // 区分了包装的对象类型和纯对象类型 valueOf() 返回对象的原始值
+    // 拆箱后的对象类型, 为了区分是否是装箱类型
     const other = typeof value.valueOf === 'function' ? value.valueOf() : value
     console.log(value.valueOf(), 'value.valueOf()');
     console.log(other, 'other', typeof other);
