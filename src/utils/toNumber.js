@@ -55,6 +55,7 @@ function toNumber(value) {
     console.log(value.valueOf(), 'value.valueOf()');
     console.log(other, 'other', typeof other);
     // `${ {} }` => [object Object]
+    // `${xx}` => xx.toString()
     value = isObject(other) ? `${other}` : other
     console.log(value);
   }
