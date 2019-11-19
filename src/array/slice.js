@@ -52,6 +52,5 @@ function slice(array, start, end) {
   return result
 }
 
-console.log(slice([1, 2, 3], 0, {}))
 
 module.exports = slice

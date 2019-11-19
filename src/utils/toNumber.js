@@ -52,27 +52,21 @@ function toNumber(value) {
     // {}.valueOf() => {}
     // 拆箱后的对象类型, 为了区分是否是装箱类型
     const other = typeof value.valueOf === 'function' ? value.valueOf() : value
-    console.log(value.valueOf(), 'value.valueOf()');
-    console.log(other, 'other', typeof other);
     // `${ {} }` => [object Object]
     // `${xx}` => xx.toString()
     value = isObject(other) ? `${other}` : other
-    console.log(value);
   }
   if (typeof value !== 'string') {
-    console.log(value, 'value');
     return value === 0 ? value : +value
   }
 
   // 除空格
   value = value.replace(reTrim, '')
-  console.log(value);
   const isBinary = reIsBinary.test(value)
   return (isBinary || reIsOctal.test(value))
     ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
     : (reIsBadHex.test(value) ? NAN : +value)
 }
 
-console.log(toNumber({ a: 1 }));
 
 module.exports = toNumber
