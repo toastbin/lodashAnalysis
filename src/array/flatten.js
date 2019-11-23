@@ -1,4 +1,4 @@
-// const baseFlatten = require('./.internal/baseFlatten.js')
+const baseFlatten = require('./baseFlatten')
 
 /**
  * Flattens `array` a single level deep.

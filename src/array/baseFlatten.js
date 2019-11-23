@@ -1,4 +1,4 @@
-// import isFlattenable from './isFlattenable.js'
+const isFlattenable = require('../utils/isFlattenable')
 
 /**
  * The base implementation of `flatten` with support for restricting flattening.
