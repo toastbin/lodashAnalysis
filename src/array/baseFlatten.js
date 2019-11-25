@@ -35,4 +35,12 @@ function baseFlatten(array, depth, predicate, isStrict, result) {
   return result
 }
 
+function flatten(arr) {
+  return arr.reduce((pre, cur) => {
+    return [...pre, ...Array.isArray(cur) ? flatten(cur) : [cur]]
+  }, [])
+}
+
+console.log(flatten([1, 2, 3, [4, 5, 6, [7, 8]]]))
+
 module.exports = baseFlatten
