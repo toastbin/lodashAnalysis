@@ -1,8 +1,8 @@
-// const SetCache = require('./SetCache.js')
-// const arrayIncludes = require('./arrayIncludes.js')
-// const arrayIncludesWith = require('./arrayIncludesWith.js')
-// const map = require('../map.js')
-// const cacheHas = require('./cacheHas.js')
+const SetCache = require('./SetCache.js')
+const arrayIncludes = require('./arrayIncludes.js')
+const arrayIncludesWith = require('./arrayIncludesWith.js')
+const map = require('../map.js')
+const cacheHas = require('./cacheHas.js')
 
 /** Used as the size to enable large array optimizations. */
 const LARGE_ARRAY_SIZE = 200
